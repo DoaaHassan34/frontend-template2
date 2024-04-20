@@ -1,0 +1,441 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    perspective: 700px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+header{
+    width: 80%;
+    margin:auto;
+}
+.main-header{
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-menu{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.dropdown-flowers{
+position: relative;
+}
+.dropdown-list li a{
+    color: #ce4257;
+    margin: 12px 0px;
+    display: block;
+    font-size: 18px;
+}
+
+#first{
+    text-decoration: underline dotted #ce4257 1px;
+    text-underline-offset: 7px;
+}
+
+.dropdown{
+position: absolute;
+margin-top: 15px;
+width: 500px;
+background-color: white;
+display: flex;
+justify-content: space-between;
+border: 2px solid #ce4257;
+padding: 18px;
+opacity: 0;
+transform: scale(0);
+transition: all 0.4s;
+}
+.dropdown-flowers:hover .dropdown{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.link-item{
+    position: relative;
+    color: #ce4257;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+    height: 40px;
+    flex-grow: 3;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    transition: all 0.5s;
+
+}
+.link-item::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    top:0;
+    left: 0;
+    bottom: 0;
+    background-color: #ce4257;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.link-item:hover::before{
+    opacity: 1;
+    width: 100%;
+}
+.link-item::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom:0;
+    left: 0;
+    bottom: 0;
+    background-color: #ce4257;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.link-item:hover::after{
+    opacity: 1;
+    width: 100%;
+}
+.link-item:hover{
+    border-left: 2px solid #ce4257;
+    border-right: 2px solid #ce4257;
+
+}
+
+.header-icons{
+    margin-left: 80px;
+    font-size: 25px;
+
+}
+.header-icons span{
+    font-size: 15px;
+}
+.cart-count{
+    display: inline;
+    background-color: #ce4257;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    padding: 3px;
+}
+/*-------------------------------banner-section-----------------------------*/
+
+.basic-banner{
+    width: 80%;
+    height: 450px;
+    margin: 50px auto;
+    background-image: url(../images/flower-banner-4.jpg);
+    background-size: cover;
+}
+.basic-banner button{
+    width: 150px;
+    height: 70px;
+    background-color: #ce4257;
+    color: white;
+    font-size: 22px;
+    border: #ce4257;
+    border-radius: 5px;
+    margin-top: 225px;
+    margin-left: 40%;
+    text-align: center;
+    transition: 0.7s;
+}
+.basic-banner button:hover{
+    transform: scale(1.25);
+}
+/*--------------------------category section---------------------------------*/
+
+.category{
+    width: 80%;
+    margin: auto;
+}
+.category-text{
+    text-align: center;
+    color: #ce4257;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+.category-line{
+    width:100px;
+    height: 3px;
+    background-color: #ce4257;
+    margin: auto;
+    transition: 0.5s;
+
+}
+.category-line:hover{
+    width: 150px;
+}
+
+.category-items{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.category-item{
+    position: relative;
+    width: 24%;
+    height: 320px;
+    margin-bottom: 40px;
+}
+.category-item::after{
+    position: absolute;
+    content: ">";
+    width: 30px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-color: #ce4257;
+    text-align: center;
+    color: white;
+}
+.category-item:hover::after{
+    opacity: 1;
+}
+.category-item img{
+    width:100%;
+    height: 250px;
+    margin-bottom: 25px;
+}
+.category-item span{
+    color: gray;
+}
+.category-item-title{
+    font-size: 20px;
+}
+/*------------------/ category section---------------------------------*/
+
+/*---------------------------------------------------------------*/
+
+.discound-parent{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.discound-paragraph{
+    width: 48%;
+    height: 350px;
+    background-color: #fefae0;
+    padding: 20px;
+
+}
+.discound-paragraph i{
+    color: #ce4257;
+    font-size: 50px;
+    margin-top: 10px;
+    
+}
+.marketing{
+    display: block;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.discound-paragraph p{
+    line-height: 25px;
+    font-size: 20px;
+}
+.discount-paragraph-title{
+    display: inline-block;
+    color: #ce4257;
+    font-size: 30px;
+}
+.discount-lines{
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-left: 65%;
+}
+.discount-line{
+    width: 50px;
+    height: 2px;
+    background-color: #ce4257;
+}
+.discount-item{
+    width: 24%;
+    height: 350px;
+    transition: 1s;
+}
+.discount-item-1{
+    background-image: url(../images/perfume.png);
+    background-size: cover;
+}
+.discount-item-2{
+    background-image: url(../images/vouchers.png);
+    background-size: cover;
+}
+.discount-item:hover{
+    transform: scale(1.1);
+}
+.discount-amount{
+    display: block;
+    transform: translate(20px, 50px);
+    color: white;
+    font-size: 22px;
+}
+.discount-item h3{
+    transform: translate(20px, 60px);
+    font-size: 22px;
+}
+
+/*--------delivery-section--------*/
+.delivery{
+
+    width: 80%;
+    margin: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+
+}
+.delivery-items{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.delivery-item{
+    width: 20%;
+    border-left: 1px solid #ce4257;
+    text-align: center;
+    padding: 10px;
+}
+.delivery-item-1{
+    border-left: none;
+}
+.delivery-icons{
+
+    height: 60px;
+    overflow: hidden;
+}
+.delivery-icons:hover .delivery-icon-1{
+    transform: translateY(-60px);
+}
+.delivery-icons:hover .delivery-icon-2{
+    transform: translateY(-60px);
+}
+.delivery-icon-1{
+    padding: 10px;
+    transition: all 0.3s;
+}
+.delivery-icon-1 i{
+    font-size: 40px;
+    color: gray;
+}
+.delivery-icon-2{
+    padding: 10px;
+    transition: all 0.3s;
+
+}
+.delivery-icon-2 i{
+    font-size: 40px;
+    color: #ce4257; 
+}
+.delivery-title{
+    font-size: 22px;
+}
+.delivery-text{
+    font-size: 17px;
+    color: gray;
+}
+/*--------------------------------------------*/
+
+footer{
+    width:90%;
+    margin: auto;
+}
+
+.products{
+    padding: 50px;
+}
+.address p{
+    width: 100px;
+    height: 3px;
+    margin: 20px auto;
+    background-color: #ce4257;
+    transition: all 0.5s;
+}
+.address h2{
+    font-size: 34px;
+    text-align: center;
+}
+.address p:hover{
+    width:150px;
+}
+.product-type{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    font-size: 20px;
+}
+
+.product-items{
+    width: 100%;
+    padding: 80px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: 20px;
+}
+.product-item{
+    width: 100%;
+    position: relative;
+    transition: all 0.3s;
+}
+.product-item-front{
+    height: 300px;
+    width: 100%;
+    background-image: url(../images/flower-7.webp);
+    background-size: cover; 
+    position: absolute;
+}
+.product-item-back{
+    height: 300px;
+    width: 100%;
+    background-image: url(../images/flower-10.webp);
+    background-size: cover;
+    transform: scaleX(0);
+    transition: all 0.3s;
+}
+.product-item-back i{
+    color: white;
+    background-color: #ce4257;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+}
+.product-item:hover .product-item-back{
+    transform: scaleX(1);
+    opacity:0.9;
+}
+.product-item-details{
+    padding: 20px;
+    font-size: 20px;
+}
+.product-stars i{
+    color: rgba(243, 243, 9, 0.932);
+}
+.back-icons{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
